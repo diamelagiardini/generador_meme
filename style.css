@@ -1,0 +1,49 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+.centrado {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/*HEADER*/
+
+header {
+  background-color: #bfbfbf;
+  color: #38383b;
+}
+
+header > h1 {
+  font-size: 35px;
+  padding-top: 15px;
+}
+
+.botonesHeader {
+  display: flex;
+}
+
+.botonHeader {
+  margin: 15px;
+  padding: 7px;
+  border: none;
+  background-color: #bfbfbf;
+}
+
+.botonHeader:hover {
+  background-color: #ffffffdc;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.botonHeader > i {
+  margin-right: 3px;
+  font-size: 16px;
+}
+
+.botonHeader > span {
+  font-size: 16px;
+}
