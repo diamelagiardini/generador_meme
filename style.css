@@ -92,3 +92,20 @@ header > h1 {
   color: #ffffff;
   font-size: 18px;
 }
+
+/*ASIDE IMAGEN*/
+
+aside{
+  background-color:#ffffff ;
+  z-index: 1;
+  width: 285px;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  right: 0;
+}
+
+#asideImagen > h2{
+  text-align: center;
+  margin: 10px;
+}
