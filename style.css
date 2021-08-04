@@ -1,6 +1,15 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap');
+
 * {
   box-sizing: border-box;
   margin: 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+body{
+  background-color: #EEEEEE;
+  font-weight: 400;
 }
 
 .centrado {
@@ -19,6 +28,7 @@ header {
 
 header > h1 {
   font-size: 35px;
+  font-weight: 700;
   padding-top: 15px;
 }
 
@@ -46,4 +56,39 @@ header > h1 {
 
 .botonHeader > span {
   font-size: 16px;
+}
+/*MAIN*/
+
+.cajaImagenCompleta {
+  width: 500px;
+  height: 500px;
+}
+/*MEDIA EN 500 ACHICAR MEDIDAS*/
+
+.cajaImagenCompleta p {
+  background-color: #ffffff;
+  width: 100%;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 900;
+  font-size: 35px;
+}
+
+.CajaImagenSinTexto{
+    width:100%;
+    /* height: 25vw; */
+    height: 400px;
+    background-color: #000000;
+}
+
+#botonDescarga{
+  background-color: #2e7d32;
+  margin-top: 20px;
+  padding: 15px 15px;
+  border: none;
+  border-radius: 5px;
+  color: #ffffff;
+  font-size: 18px;
 }
