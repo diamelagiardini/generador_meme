@@ -44,15 +44,16 @@
 
     <aside id="asideImagen">
         <h2>Imagen</h2>
-        
-        <div id="url">
-            <label> URL
-                <textarea name="" id="" cols="30" rows="10"></textarea>
+
+        <div id="url" class="paddingContenidoPanelImagen">
+            <h3>URL</h3>
+            <textarea name="" id="" cols="30" rows="10"></textarea>
             </label>
         </div>
 
-        <div id="fondo">
-            <label> FONDO
+        <div id="fondo" class="paddingContenidoPanelImagen">
+            <h3>FONDO</h3>
+            <div id="divColores">
                 <input type="color" name="" id="">
                 <select name="" id="">
                     <option value="">Ninguno</option>
@@ -62,11 +63,52 @@
                     <option value="">Luminosidad</option>
                     <option value="">Multiplicar</option>
                 </select>
-            </label>
+            </div>
         </div>
 
-        <div id="filtros"></div>
-        
+        <div id="filtros" class="paddingContenidoPanelImagen">
+            <h3>FILTROS</h3>
+            <div>
+                <label for="brightness">BRILLO</label>
+                <input type="range" id="brightness" min="0" max="1" value="1" step="0.1">
+            </div>
+            <div>
+                <label for="opacity">OPACIDAD</label>
+                <input type="range" id="opacity" min="0" max="1" value="1" step="0.1">
+            </div>
+            <div>
+                <label for="contrast">CONTRASTE</label>
+                <input type="range" id="contrast" min="100" max="1000" value="100">
+            </div>
+            <div>
+                <label for="blur">DESENFOQUE</label>
+                <input type="range" id="blur" min="0" max="10" value="0" step="0.1">
+            </div>
+            <div>
+                <label for="grayscale">ESCALA DE GRISES</label>
+                <input type="range" id="grayscale" min="0" max="100" value="0">
+            </div>
+            <div>
+                <label for="sepia">SEPIA</label>
+                <input type="range" id="sepia" min="0" max="100" value="0">
+            </div>
+            <div>
+                <label for="hue-rotation">HUE</label>
+                <input type="range" id="hue-rotation" min="0" max="360" value="0">
+            </div>
+            <div>
+                <label for="saturation">SATURADO</label>
+                <input type="range" id="saturation" min="100" max="1000" value="100" step="10">
+            </div>
+            <div>
+                <label for="invert">NEGATIVO</label>
+                <input type="range" id="invert" min="0" max="1" value="0" step="0.1">
+            </div>
+        </div>
+
+        <div>
+            <button id="botonReestablecer">Reestablecer filtros</button>
+        </div>
     </aside>
 </body>
 
