@@ -18,6 +18,22 @@ body {
   align-items: center;
 }
 
+/*ESTILOS MODO OSCURO*/
+
+.grisHeader{
+  background-color:#323233 ;
+  color: #ffffff;
+}
+
+.grisBody{
+  background-color: #515052;
+}
+
+.grisPaneles{
+  background-color: #444345;
+  color: #ffffff;
+}
+
 /*HEADER*/
 
 header {
@@ -40,8 +56,8 @@ header > h1 {
   padding: 7px;
   border: none;
   border-radius: 10px;
-  background-color: #bfbfbf;
   transition: 0.5s;
+  background-color: #bfbfbf;
 }
 
 .botonHeader:hover {
