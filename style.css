@@ -172,12 +172,9 @@ input[type='range'] {
 }
 
 input[type='range']:focus{
-  width: 100%;
   background-color: #9e9e9e;;
   border-radius: 10px;
   appearance: none;
-  height: 6px;
-  margin-top: 10px;
 }
 
 .paddingContenidoPanelImagen{
@@ -196,4 +193,8 @@ input[type='range']:focus{
   background-color: #EEEEEE;
   cursor: pointer;
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+#asideTexto{
+  display: none;
 }
