@@ -11,28 +11,49 @@
 </head>
 
 <body id="body">
+
+    <!----------------------INICIA HEADER------------------------>
+
+
     <header id="header" class="centrado">
+
         <h1>Generador de memes</h1>
+
         <div class="botonesHeader">
+
             <button id="botonImagen" class="botonHeader colorModoClaroBotones">
                 <i class="fas fa-image"></i>
                 <span>Imagen</span>
             </button>
+
             <button id="botonTexto" class="botonHeader colorModoClaroBotones">
                 <i class="fas fa-font"></i><span>Texto</span>
             </button>
+
             <button id="botonModoOscuro" class="botonHeader colorModoClaroBotones">
                 <i class="fas fa-lightbulb"></i><span>Modo Oscuro</span>
             </button>
+
         </div>
+
     </header>
+
+<!----------------------FIN HEADER------------------------>
+
+
+<!---------------INICIA CAJA GENERADOR DE MEME ------------>
+
 
     <main class="centrado">
 
         <div class="cajaImagenCompleta centrado">
-            <p>TOP TEXT</p>
+
+            <p id="textoSuperior">TOP TEXT</p>
+
             <div class="CajaImagenSinTexto"></div>
-            <p>BOTTOM TEXT</p>
+
+            <p id="textoInferior">BOTTOM TEXT</p>
+
         </div>
 
         <button id="botonDescarga">
@@ -42,32 +63,43 @@
 
     </main>
 
+    <!---------------FINALIZA CAJA GENERADOR DE MEME ------------>
+
+    <!---------------INICIA ASIDE IMAGEN  ------------>
+
     <aside id="asideImagen">
         <h2>IMAGEN</h2>
 
         <div id="url" class="paddingContenidoPanelImagen">
+
             <h3>URL</h3>
+
             <textarea class="estiloModoClaroDePaneles" id="textareaImagen" cols="30" rows="10"></textarea>
-            </label>
+
         </div>
 
         <div id="fondo" class="paddingContenidoPanelImagen">
             <h3>FONDO</h3>
+
             <div id="divColores">
                 <input class="estiloModoClaroDePaneles" type="color" name="" id="selectorDeColor">
-                <select class="estiloModoClaroDePaneles" name="" id="">
-                    <option value="" selected>Ninguno</option>
-                    <option value="aclarar">Aclarar</option>
-                    <option value="oscurecer">Oscurecer</option>
-                    <option value="diferencia">Diferencia</option>
-                    <option value="luminosidad">Luminosidad</option>
-                    <option value="multiplicar">Multiplicar</option>
+
+                <select class="estiloModoClaroDePaneles" name="" id="selectorFiltros">
+
+                    <option id="ningunFiltro" value="" selected>Ninguno</option>
+                    <option id="aclararFiltro" value="aclarar">Aclarar</option>
+                    <option id="oscurecerFiltro" value="oscurecer">Oscurecer</option>
+                    <option id="diferenciaFiltro" value="diferencia">Diferencia</option>
+                    <option id="luminosidadFiltro" value="luminosidad">Luminosidad</option>
+                    <option id="multiplicarFiltro" value="multiplicar">Multiplicar</option>
+
                 </select>
             </div>
         </div>
 
         <div id="filtros" class="paddingContenidoPanelImagen">
             <h3>FILTROS</h3>
+
             <div>
                 <label for="brightness">BRILLO</label>
                 <input type="range" id="brightness" min="0" max="1" value="1" step="0.1">
@@ -111,26 +143,32 @@
         </div>
     </aside>
 
+    <!---------------FIN DE ASIDE IMAGEN ------------>
+
+    <!---------------INICIO DE ASIDE TEXTO ------------>
+
     <aside id="asideTexto" class="paddingContenidoPanelImagen">
         <h2>TEXTO</h2>
 
         <div id="divTextoSuperior">
             <h3>SUPERIOR</h3>
-            <textarea class="estiloModoClaroDePaneles">TOP TEXT</textarea>
+            <textarea id="textareaTextoSuperior" class="estiloModoClaroDePaneles">TOP TEXT</textarea>
         </div>
 
-        <input type="checkbox" name="" id=""> Sin texto superior
+        <input type="checkbox" name="" id="sinTextoSuperior"> Sin texto superior
 
         <div id="divTextoInferior">
             <h3>INFERIOR</h3>
-            <textarea class="estiloModoClaroDePaneles">BOTTOM TEXT</textarea>
+            <textarea id="textareaTextoInferior" class="estiloModoClaroDePaneles">BOTTOM TEXT</textarea>
         </div>
 
-        <input type="checkbox" name="" id=""> Sin texto inferior
+        <input type="checkbox" name="" id="sinTextoInferior"> Sin texto inferior
 
         <div id="tiposDeFuente">
             <h3>FUENTE</h3>
+
             <select class="estiloModoClaroDePaneles">
+
                 <option value="Arial">Arial</option>
                 <option value="Arial Black">Arial Black</option>
                 <option value="American Typewriter">American Typewriter</option>
@@ -140,7 +178,9 @@
                 <option value="Impact">Impact</option>
                 <option value="Verdana">Verdana</option>
                 <option value="Times New Roman">Times New Roman</option>
+
             </select>
+
             <div id="tamanioDeFuente">
                 <input class="estiloModoClaroDePaneles" value="40" type="number">
                 <button class="estiloModoClaroDePaneles"><i class="fas fa-align-left"></i></button>
@@ -154,6 +194,7 @@
                 <h3>COLOR</h3>
                 <input class="estiloModoClaroDePaneles" type="color" value="#000000">
             </div>
+
             <div>
                 <h3>FONDO</h3>
                 <input class="estiloModoClaroDePaneles" type="color" value="#FFFFFF">
@@ -164,6 +205,7 @@
 
         <div>
             <h3>CONTORNO</h3>
+
             <div>
                 <button class="estiloModoClaroDePaneles">Ninguno</button>
                 <button class="estiloModoClaroDePaneles">Claro</button>
@@ -175,18 +217,27 @@
             <h3>ESPACIADO</h3>
             <input class="estiloModoClaroDePaneles" type="number" value="35">
         </div>
+
         <div>
             <h3>INTERLINEADO</h3>
+
             <select class="estiloModoClaroDePaneles">
+
                 <option value="0.8">0.8</option>
                 <option value="1">1</option>
                 <option value="1.2" selected>1.2</option>
                 <option value="1.5">1.5</option>
                 <option value="2">2</option>
                 <option value="2.5">2.5</option>
+
             </select>
         </div>
+
     </aside>
+   
+    <!---------------FIN DE ASIDE TEXTO ------------>
+
+    
     <script src="app.js"></script>
 </body>
 

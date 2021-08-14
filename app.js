@@ -1,19 +1,12 @@
 // ASIDE 
 
 const abrirPanelDeTexto = document.getElementById("botonTexto")
-
 const abrirPanelDeImagen = document.getElementById("botonImagen")
-
 const panelDeImagen = document.getElementById("asideImagen")
-
 const panelDeTexto = document.getElementById("asideTexto")
-
 const cambiarTemaOscuro = document.getElementById("botonModoOscuro")
-
 const elementoBody = document.getElementById("body")
-
 const elementoHeader = document.getElementById("header")
-
 const botonDeReestablecerFiltros = document.getElementById("botonReestablecer")
 
 //FILTROS
@@ -38,8 +31,28 @@ const imagenDelMeme = document.querySelector(".CajaImagenSinTexto")
 
 const seleccionarColorFondoImagen = document.getElementById("selectorDeColor")
 
+// Selector de filtros
 
-//-------------------------------------------------------
+const selectorNinguno = document.getElementById("ningunFiltro")
+const selectorAclarar = document.getElementById("aclararFiltro")
+const selectorOscurecer = document.getElementById("oscurecerFiltro")
+const selectorDiferencia = document.getElementById("diferenciaFiltro")
+const selectorLuminosidad = document.getElementById("luminosidadFiltro")
+const selectorMultiplicar = document.getElementById("multiplicarFiltro")
+const selectorTodosLosFiltros = document.getElementById("selectorFiltros")
+
+//TEXTO
+
+const textoSuperiorMeme = document.getElementById("textoSuperior")
+const contenidoTextoSuperior = document.getElementById("textareaTextoSuperior")
+const textoInferiorMeme = document.getElementById("textoInferior")
+const contenidoTextoInferior = document.getElementById("textareaTextoInferior")
+
+const sacarTextoSuperior = document.getElementById("sinTextoSuperior")
+const sacarTextoInferior = document.getElementById("sinTextoInferior")
+
+
+//-----------------------------------------------------------------------
 
 //Cambia a panel de texto
 const cambiarAPanelTexto = () => {
@@ -89,14 +102,8 @@ urlImagen.onchange = () => {
     imagenDelMeme.style.backgroundImage = `url("${urlImagen.value}")`
 }
 
-// Cambiar fondo de imagen 
-
-seleccionarColorFondoImagen.onchange = () => {
-    imagenDelMeme.style.backgroundColor = `${seleccionarColorFondoImagen.value}`
-}
 
 //RANGE FILTROS 
-
 
 rangeBrillo.onchange = () => {
     imagenDelMeme.style.filter = `brightness(${rangeBrillo.value})`
@@ -133,3 +140,17 @@ rangeSaturado.onchange = () => {
 rangeNegativo.onchange = () => {
     imagenDelMeme.style.filter = `invert(${rangeNegativo.value})`
 }
+
+// ASIDE TEXTO 
+
+// Texto superior del meme 
+
+contenidoTextoSuperior.oninput = () => {
+    textoSuperiorMeme.textContent = contenidoTextoSuperior.value
+}
+
+//Texto inferior del meme
+contenidoTextoInferior.oninput = () => {
+    textoInferiorMeme.textContent = contenidoTextoInferior.value
+}
+
