@@ -17,6 +17,7 @@ const elementoHeader = document.getElementById("header")
 const botonDeReestablecerFiltros = document.getElementById("botonReestablecer")
 
 //FILTROS
+
 const rangeBrillo = document.getElementById("brightness")
 const rangeOpacidad = document.getElementById("opacity")
 const rangeConstraste = document.getElementById("contrast")
@@ -26,6 +27,16 @@ const rangeSepia = document.getElementById("sepia")
 const rangeHue = document.getElementById("hue-rotation")
 const rangeSaturado = document.getElementById("saturation")
 const rangeNegativo = document.getElementById("invert")
+
+
+//URL IMAGEN 
+
+const urlImagen = document.getElementById("textareaImagen")
+const imagenDelMeme = document.querySelector(".CajaImagenSinTexto")
+
+
+
+//-------------------------------------------------------
 
 
 const cambiarAPanelTexto = () => {
@@ -66,3 +77,8 @@ const restablecerValoresDeFiltros = () => {
 }
 
 botonDeReestablecerFiltros.onclick = restablecerValoresDeFiltros
+
+
+urlImagen.onchange = () => {
+    imagenDelMeme.style.backgroundImage = `url("${urlImagen.value}")`
+}
