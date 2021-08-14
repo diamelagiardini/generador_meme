@@ -56,12 +56,12 @@
             <div id="divColores">
                 <input class="estiloModoClaroDePaneles" type="color" name="" id="selectorDeColor">
                 <select class="estiloModoClaroDePaneles" name="" id="">
-                    <option value="">Ninguno</option>
-                    <option value="">Aclarar</option>
-                    <option value="">Oscurecer</option>
-                    <option value="">Diferencia</option>
-                    <option value="">Luminosidad</option>
-                    <option value="">Multiplicar</option>
+                    <option value="" selected>Ninguno</option>
+                    <option value="aclarar">Aclarar</option>
+                    <option value="oscurecer">Oscurecer</option>
+                    <option value="diferencia">Diferencia</option>
+                    <option value="luminosidad">Luminosidad</option>
+                    <option value="multiplicar">Multiplicar</option>
                 </select>
             </div>
         </div>
@@ -78,7 +78,7 @@
             </div>
             <div>
                 <label for="contrast">CONTRASTE</label>
-                <input type="range" id="contrast" min="100" max="1000" value="100">
+                <input type="range" id="contrast" min="100%" max="1000%" value="100%" step="1%">
             </div>
             <div>
                 <label for="blur">DESENFOQUE</label>
@@ -90,7 +90,7 @@
             </div>
             <div>
                 <label for="sepia">SEPIA</label>
-                <input type="range" id="sepia" min="0" max="100" value="0">
+                <input type="range" id="sepia" min="0%" max="100%" value="0%" step="1%">
             </div>
             <div>
                 <label for="hue-rotation">HUE</label>
