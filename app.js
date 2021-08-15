@@ -30,7 +30,7 @@ const imagenDelMeme = document.querySelector(".CajaImagenSinTexto")
 //FONDO IMAGEN
 
 const seleccionarColorFondoImagen = document.getElementById("selectorDeColor")
-
+const divFiltroColor = document.getElementById("filtroColor")
 // Selector de filtros
 
 const selectorNinguno = document.getElementById("ningunFiltro")
@@ -81,6 +81,14 @@ const cambiarAModoOscuro = () => {
 
 cambiarTemaOscuro.onclick = cambiarAModoOscuro
 
+
+// filtro de color de fondo 
+
+seleccionarColorFondoImagen.onclick =()=>{
+    divFiltroColor.style.backgroundColor = `${seleccionarColorFondoImagen.value}`
+}
+
+
 //Al tocar boton de reestablecer los valores todos quedan como al principio
 const restablecerValoresDeFiltros = () => {
     imagenDelMeme.style.filter="none"
@@ -92,7 +100,9 @@ const restablecerValoresDeFiltros = () => {
     rangeSepia.value="0"
     rangeHue.value="0"
     rangeSaturado.value="100"
-    rangeNegativo.value="0"    
+    rangeNegativo.value="0" 
+    divFiltroColor.style.backgroundColor = "transparent"
+    seleccionarColorFondoImagen.value="0"
 }
 
 botonDeReestablecerFiltros.onclick = restablecerValoresDeFiltros
@@ -153,4 +163,3 @@ contenidoTextoSuperior.oninput = () => {
 contenidoTextoInferior.oninput = () => {
     textoInferiorMeme.textContent = contenidoTextoInferior.value
 }
-

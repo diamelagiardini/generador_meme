@@ -94,13 +94,22 @@ header > h1 {
 }
 
 .CajaImagenSinTexto {
-  width: 100%;
+  width: 500px;
   height: 400px;
   background-color: #000000;
   background-repeat: no-repeat;
   background-size: cover;
   background-position-x: center;
   background-position-y: center;
+}
+
+#filtroColor{
+  width: 500px;
+  height: 336px;
+  background-color:transparent;
+  opacity: 0.5;
+  position: fixed;
+  
 }
 
 #botonDescarga {
