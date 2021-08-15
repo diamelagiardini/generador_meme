@@ -18,6 +18,47 @@ body {
   align-items: center;
 }
 
+/*Fuentes*/
+/*todavia no funcionan*/
+
+.arial{
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.arialBlack{
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+}
+
+.american {
+  font-family: "American Typewriter";
+}
+
+.andale {
+  font-family: "Andale Mono";
+}
+
+.comicSans {
+font-family: "Comic Sans MS";
+}
+
+.helvetica{
+  font-family: Helvetica;
+}
+
+.inpact{
+  font-family: Impact;
+}
+
+.verdana{
+  font-family: Verdana;
+}
+
+.timesNew{
+  font-family: "Times New Roman";
+}
+
+
 /*ESTILOS MODO OSCURO*/
 
 .grisHeader {

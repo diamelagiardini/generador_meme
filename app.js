@@ -51,6 +51,17 @@ const contenidoTextoInferior = document.getElementById("textareaTextoInferior")
 const sacarTextoSuperior = document.getElementById("sinTextoSuperior")
 const sacarTextoInferior = document.getElementById("sinTextoInferior")
 
+//FUENTES 
+
+const arial = document.getElementById("arial")
+const arialBlack = document.getElementById("rialBlack")
+const american = document.getElementById("americanTypewriter")
+const andale = document.getElementById("andaleMono")
+const comic = document.getElementById("comicSansMS")
+const helvetica = document.getElementById("helvetica")
+const impact = document.getElementById("impact")
+const verdana = document.getElementById("verdana")
+const times = document.getElementById("timesNewRoman")
 
 //-----------------------------------------------------------------------
 
@@ -162,4 +173,52 @@ contenidoTextoSuperior.oninput = () => {
 //Texto inferior del meme
 contenidoTextoInferior.oninput = () => {
     textoInferiorMeme.textContent = contenidoTextoInferior.value
+}
+
+//Cambiar fuentes 
+
+// NO FUNCIONA 
+arial.onclick = () => {
+    textoSuperiorMeme.classList.add("arial")
+    textoInferiorMeme.classList.add("arial")
+}
+
+arialBlack.onclick = () => {
+    textoSuperiorMeme.classList.add("arialBlack")
+    textoInferiorMeme.classList.add("arialBlack")
+}
+
+american.onclick = () => {
+    textoSuperiorMeme.classList.add("american")
+    textoInferiorMeme.classList.add("american")
+}
+
+andale.onclick = () => {
+    textoSuperiorMeme.classList.add("andale")
+    textoInferiorMeme.classList.add("andale")
+}
+
+comic.onclick = () => {
+    textoSuperiorMeme.classList.add("comicSans")
+    textoInferiorMeme.classList.add("comicSans")
+}
+
+helvetica.onclick = () => {
+    textoSuperiorMeme.classList.add("helvetica")
+    textoInferiorMeme.classList.add("helvetica")
+}
+
+impact.onclick = () => {
+    textoSuperiorMeme.classList.add("inpact")
+    textoInferiorMeme.classList.add("inpact")
+}
+
+verdana.onclick = () => {
+    textoSuperiorMeme.classList.add("verdana")
+    textoInferiorMeme.classList.add("verdana")
+}
+
+times.onclick = () => {
+    textoSuperiorMeme.classList.add("timesNew")
+    textoInferiorMeme.classList.add("timesNew")
 }
