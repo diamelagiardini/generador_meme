@@ -175,6 +175,29 @@ contenidoTextoInferior.oninput = () => {
     textoInferiorMeme.textContent = contenidoTextoInferior.value
 }
 
+//Ocultar texto superior 
+
+sacarTextoSuperior.onclick = () => {
+    if (sacarTextoSuperior.checked === true){
+        textoSuperiorMeme.style.display="none"
+    }
+    else{
+        textoSuperiorMeme.style.display="flex"
+    }
+}
+
+// Ocultar texto inferior 
+sacarTextoInferior.onclick = () => {
+    if (sacarTextoInferior.checked === true){
+        textoInferiorMeme.style.display="none"
+    }
+    else{
+        textoInferiorMeme.style.display="flex"
+    }
+}
+
+
+
 //Cambiar fuentes 
 
 // NO FUNCIONA 
