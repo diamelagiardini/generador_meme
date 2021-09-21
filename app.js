@@ -94,8 +94,11 @@ cambiarTemaOscuro.onclick = cambiarAModoOscuro
 
 
 // filtro de color de fondo 
-
+// ojo con la sintaxis, separa siempre con espacio:
+//  = () => {
 seleccionarColorFondoImagen.onclick =()=>{
+    // no es necesaria la interpolacion aca, era igual si ponias
+    // divFiltroColor.style.backgroundColor = seleccionarColorFondoImagen.value
     divFiltroColor.style.backgroundColor = `${seleccionarColorFondoImagen.value}`
 }
 
@@ -125,6 +128,32 @@ urlImagen.onchange = () => {
 
 
 //RANGE FILTROS 
+// El problema de resolver la funcionalidad de esta manera es que los filtros se pisan entre si
+// Al decir " imagenDelMeme.style.filter = " estoy diciendo "va a ser igual a esto, y reemplazar 
+// cualquier valor que tuviera antes" 
+// Por eso si establezco un brillo, y despues opacidad, el valor del brillo se pierde
+// Una manera de resolverlo es asignar todas las variables a la vez:
+
+// const cambiarFiltros = () => {
+//     imagen.style.filter = `
+//     brightness(${rangeBrillo.value}) opacity(${rangeOpacidad.value}) 
+//     blur(${rangeDesenfoque.value}px) contrast(${rangeConstraste.value}%) 
+//     grayscale(${rangeEscalaDeGrises.value}%) hue-rotate(${rangeHue.value}deg) 
+//     sepia(${rangeSepia.value}%) saturate(${rangeSaturado.value}%) invert(${rangeNegativo.value})
+//     `;
+// }
+
+// Y despues, cada funcion onchange llama a la misma: 
+
+// rangeBrillo.onchange =  cambiarFiltros
+// rangeOpacidad.onchange = cambiarFiltros
+// rangeConstraste.onchange =  cambiarFiltros
+// rangeDesenfoque.onchange =  cambiarFiltros
+// rangeEscalaDeGrises.onchange = cambiarFiltros
+// rangeSepia.onchange =  cambiarFiltros
+// rangeHue.onchange = cambiarFiltros
+// rangeSaturado.onchange = cambiarFiltros
+// rangeNegativo.onchange = cambiarFiltros
 
 rangeBrillo.onchange = () => {
     imagenDelMeme.style.filter = `brightness(${rangeBrillo.value})`
@@ -178,6 +207,8 @@ contenidoTextoInferior.oninput = () => {
 //Ocultar texto superior 
 
 sacarTextoSuperior.onclick = () => {
+    // No necesitas comparar contra true
+    // if (sacarTextoSuperior.checked) {
     if (sacarTextoSuperior.checked === true){
         textoSuperiorMeme.style.display="none"
     }
@@ -188,6 +219,7 @@ sacarTextoSuperior.onclick = () => {
 
 // Ocultar texto inferior 
 sacarTextoInferior.onclick = () => {
+    // mismo que el comentario anterior
     if (sacarTextoInferior.checked === true){
         textoInferiorMeme.style.display="none"
     }
@@ -201,6 +233,15 @@ sacarTextoInferior.onclick = () => {
 //Cambiar fuentes 
 
 // NO FUNCIONA 
+// Estas seleccionando cada uno de los option y dandoles un onclick. 
+// No es asi como funciona el select
+// Tenes que seleccionar el select 
+// const selectFuentes = document.querySelector(".estiloModoClaroDePaneles")
+
+// y usar la funcion onchange: 
+// selectFuentes.onchange = () => {
+//     aca tu codigo
+// }
 arial.onclick = () => {
     textoSuperiorMeme.classList.add("arial")
     textoInferiorMeme.classList.add("arial")
